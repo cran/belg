@@ -1,12 +1,12 @@
-8c104632d79b8c9b4381bee30d6fa0d7 *DESCRIPTION
+c9a4ed4db37d14d369ec05730711f734 *DESCRIPTION
 d50dce2c8479ea274754309bc066ea9f *LICENSE
 68e846e3b87101dd383f014f0eefb311 *NAMESPACE
-d41508caffb3f75afc285bec4e77efef *NEWS.md
+6b957e8af794e501924091e47da2e6cd *NEWS.md
 7b50258944ee1ad5ce35b8c1e8d655d6 *R/RcppExports.R
 8a72e6b6a4d51a1d1cd08236ff16de54 *R/belg.R
 c47c842cac6deb68f48a8a03c53ecf8d *R/datasets.R
 738b2f5d94b091243950b73861f956e8 *R/get_boltzmann.R
-ea5e71c75ad25f3ef3479b9d19911a81 *README.md
+a3066a98029a3ff4914a78547ebd1fac *README.md
 971ac5d6d7a72a9a04d9ea85024676d2 *data/complex_land.rda
 f7f35d4ebb333d07c52e262f60cd1128 *data/simple_land.rda
 c1498216a94c842200e3079220d28e40 *man/belg.Rd
@@ -15,7 +15,7 @@ c1498216a94c842200e3079220d28e40 *man/belg.Rd
 3c95257528d5ac095bc434a93ce42b17 *man/get_boltzmann.Rd
 00315aa977b87b30031b40e5472d1d1e *man/simple_land.Rd
 21f26d54785b2a2cb07839c1c96a99e8 *src/RcppExports.cpp
-42e3a8863195604479638193c0528a29 *src/get_boltzmann.cpp
+1cf05452cd3bc19c67d864854335d40c *src/get_boltzmann.cpp
 eb824c51faa04576429ac42e04d7ed62 *tests/testthat.R
 8e38332a4d5f8bbaf6c1e3d173020ddb *tests/testthat/test-matrix.R
 2da85d8e736b6ed4cafdc112c2000f15 *tests/testthat/test-raster.R
