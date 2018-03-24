@@ -2,15 +2,10 @@
 % Please edit documentation in R/get_boltzmann.R
 \name{get_boltzmann}
 \alias{get_boltzmann}
-\alias{get_boltzmann}
 \alias{get_boltzmann.default}
-\alias{get_boltzmann}
 \alias{get_boltzmann.array}
-\alias{get_boltzmann}
 \alias{get_boltzmann.RasterLayer}
-\alias{get_boltzmann}
 \alias{get_boltzmann.RasterStack}
-\alias{get_boltzmann}
 \alias{get_boltzmann.RasterBrick}
 \title{Boltzmann entropy of a landscape gradient}
 \usage{
@@ -42,9 +37,9 @@ Calculates the Boltzmann entropy of a landscape gradient
 \details{
 The method for computing the Boltzmann entropy of a landscape
 gradient works on integer values that are either positive or equals to zero.
-This function automatically converts non-integers into integers
-and negative values are shifted to positive values. Input data with missing
-values is not supported.
+This function automatically rounds values to the nearest integer value
+(rounding halfway cases away from zero) and negative values are shifted to
+positive values.
 }
 \examples{
 new_c = c(56, 86, 98, 50, 45, 56, 96, 25,
