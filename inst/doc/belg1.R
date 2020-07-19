@@ -38,16 +38,16 @@ gplot(simple_land) +
   labs(title = "Simple landscape")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(complex_land)
-get_boltzmann(simple_land)
+get_boltzmann(complex_land, method = "hierarchy")
+get_boltzmann(simple_land, method = "hierarchy")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(complex_land) # log10
-get_boltzmann(complex_land, base = "log")
-get_boltzmann(complex_land, base = "log2")
+get_boltzmann(complex_land, method = "hierarchy") # log10
+get_boltzmann(complex_land, method = "hierarchy", base = "log")
+get_boltzmann(complex_land, method = "hierarchy", base = "log2")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(complex_land, relative = TRUE)
+get_boltzmann(complex_land, method = "hierarchy", relative = TRUE)
 
 ## ---- fig.height=4, echo=FALSE------------------------------------------------
 complex_land_l1 = complex_land
@@ -74,7 +74,7 @@ gplot(complex_land_l2) +
   labs(title = "Resampled dataset (Level 2)")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(complex_land, relative = FALSE)
+get_boltzmann(complex_land, method = "hierarchy", relative = FALSE)
 
 ## -----------------------------------------------------------------------------
 win_1 = raster(matrix(c(1, 3, 3, 4), ncol = 2))
@@ -92,7 +92,7 @@ gplot(win_1) +
   labs(title = "Window 1")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(win_1)
+get_boltzmann(win_1, method = "hierarchy")
 
 ## ---- echo = FALSE------------------------------------------------------------
 gplot(win_2) + 
@@ -123,7 +123,7 @@ gplot(win_2_3) +
   labs(title = "Window 2", subtitle = "Microstate III")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(win_2)
+get_boltzmann(win_2, method = "hierarchy")
 
 ## ---- echo = FALSE------------------------------------------------------------
 win_3_1 = win_3
@@ -140,7 +140,7 @@ gplot(win_3_2) +
   labs(title = "Window 3", subtitle = "Microstate II")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(win_3)
+get_boltzmann(win_3, method = "hierarchy")
 
 ## ---- echo = FALSE------------------------------------------------------------
 gplot(win_4) + 
@@ -150,7 +150,7 @@ gplot(win_4) +
   labs(title = "Window 4")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(win_4)
+get_boltzmann(win_4, method = "hierarchy")
 
 ## ---- echo = FALSE------------------------------------------------------------
 gplot(win_5) + 
@@ -159,5 +159,5 @@ gplot(win_5) +
   labs(title = "Window 5")
 
 ## -----------------------------------------------------------------------------
-get_boltzmann(win_5)
+get_boltzmann(win_5, method = "hierarchy")
 

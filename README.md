@@ -3,14 +3,17 @@
 
 # belg
 
+<!-- badges: start -->
+
 [![CRAN
 status](http://www.r-pkg.org/badges/version/belg)](https://cran.r-project.org/package=belg)
-[![Build
-Status](https://travis-ci.org/r-spatialecology/belg.png?branch=master)](https://travis-ci.org/r-spatialecology/belg)
+[![R build
+status](https://github.com/r-spatialecology/belg/workflows/pkgdown-and-test-coverage/badge.svg)](https://github.com/r-spatialecology/belg/actions)
 [![codecov](https://codecov.io/gh/r-spatialecology/belg/branch/master/graph/badge.svg)](https://codecov.io/gh/r-spatialecology/belg)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/belg)](https://cran.r-project.org/package=belg)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1209419.svg)](https://doi.org/10.5281/zenodo.1209419)
+<!-- badges: end -->
 
 Boltzmann entropy (also called configurational entropy) has been
 recently adopted to analyze entropy of landscape gradients (Gao et al.
@@ -30,8 +33,8 @@ install.packages("belg")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("r-spatialecology/belg")
+# install.packages("remotes")
+remotes::install_github("r-spatialecology/belg")
 ```
 
 ## Examples
@@ -52,9 +55,9 @@ Boltzmann entropy of a landscape gradient:
 
 ``` r
 get_boltzmann(land_gradient1)
-#> [1] 66785968
+#> [1] 188772.5
 get_boltzmann(land_gradient2)
-#> [1] 30134170
+#> [1] 121875.2
 ```
 
 This function accepts a `RasterLayer`, `RasterStack`, `RasterBrick`,
@@ -66,11 +69,11 @@ available options for the `base` argument.
 
 ``` r
 get_boltzmann(land_gradient1, base = "log")
-#> [1] 153780374
+#> [1] 434664.7
 get_boltzmann(land_gradient1, relative = TRUE)
-#> [1] 548520.4
+#> [1] 137645.4
 get_boltzmann(land_gradient1, base = "log2", relative = TRUE)
-#> [1] 1822145
+#> [1] 457248.1
 ```
 
 Two methods of calculating the Boltzmann entropy of a landscape gradient
