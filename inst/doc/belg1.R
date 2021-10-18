@@ -22,6 +22,8 @@ theme_set(theme_clean())
 ## ---- message=FALSE-----------------------------------------------------------
 library(raster)
 library(belg)
+complex_land = raster(system.file("raster/complex_land.tif", package = "belg"))
+simple_land = raster(system.file("raster/simple_land.tif", package = "belg"))
 
 ## ---- fig.height=4, echo=FALSE------------------------------------------------
 gplot(complex_land) + 

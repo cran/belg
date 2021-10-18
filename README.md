@@ -9,7 +9,7 @@
 status](http://www.r-pkg.org/badges/version/belg)](https://cran.r-project.org/package=belg)
 [![R build
 status](https://github.com/r-spatialecology/belg/workflows/pkgdown-and-test-coverage/badge.svg)](https://github.com/r-spatialecology/belg/actions)
-[![codecov](https://codecov.io/gh/r-spatialecology/belg/branch/master/graph/badge.svg)](https://codecov.io/gh/r-spatialecology/belg)
+[![codecov](https://app.codecov.io/gh/r-spatialecology/belg/branch/master/graph/badge.svg)](https://app.codecov.io/gh/r-spatialecology/belg)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/belg)](https://cran.r-project.org/package=belg)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1209419.svg)](https://doi.org/10.5281/zenodo.1209419)
@@ -17,10 +17,10 @@ downloads](http://cranlogs.r-pkg.org/badges/belg)](https://cran.r-project.org/pa
 
 Boltzmann entropy (also called configurational entropy) has been
 recently adopted to analyze entropy of landscape gradients (Gao et
-al. (2017, 2018, 2019)). The goal of **belg** is to provide an
-efficient C++ implementation of this method in R. It also extend the
-original idea by allowing calculations on data with missing values
-(Nowosad and Gao (2020)).
+al. (2017, 2018, 2019)). The goal of **belg** is to provide an efficient
+C++ implementation of this method in R. It also extend the original idea
+by allowing calculations on data with missing values (Nowosad and Gao
+(2020)).
 
 ## Installation
 
@@ -46,6 +46,8 @@ complex landscape and `land_gradient2` representing a simple landscape:
 ``` r
 library(raster)
 library(belg)
+land_gradient1 = raster(system.file("raster/land_gradient1.tif", package = "belg"))
+land_gradient2 = raster(system.file("raster/land_gradient2.tif", package = "belg"))
 plot(stack(land_gradient1, land_gradient2))
 ```
 
@@ -61,12 +63,12 @@ get_boltzmann(land_gradient2)
 #> [1] 121875.2
 ```
 
-This function accepts a `RasterLayer`, `RasterStack`, `RasterBrick`,
-`matrix`, or `array` object as an input. It allows for calculation of
-the relative (the `relative` argument equal to `TRUE`) and absolute
-Boltzmann entropy of a landscape gradient. As a default, it uses a
-logarithm of base 10 (`log10`), however `log` and `log2` are also
-available options for the `base` argument.
+This function accepts a `SpatRaster`, `stars`, `RasterLayer`,
+`RasterStack`, `RasterBrick`, `matrix`, or `array` object as an input.
+It allows for calculation of the relative (the `relative` argument equal
+to `TRUE`) and absolute Boltzmann entropy of a landscape gradient. As a
+default, it uses a logarithm of base 10 (`log10`), however `log` and
+`log2` are also available options for the `base` argument.
 
 ``` r
 get_boltzmann(land_gradient1, base = "log")
@@ -94,15 +96,15 @@ More examples can be find at <https://github.com/Nowosad/belg-examples>.
 
 ## References
 
-  - Gao, Peichao, Hong Zhang, and Zhilin Li. “A hierarchy-based solution
+-   Gao, Peichao, Hong Zhang, and Zhilin Li. “A hierarchy-based solution
     to calculate the configurational entropy of landscape gradients.”
     Landscape Ecology 32(6) (2017): 1133-1146.
-  - Gao, Peichao, Hong Zhang, and Zhilin Li. “An efficient analytical
+-   Gao, Peichao, Hong Zhang, and Zhilin Li. “An efficient analytical
     method for computing the Boltzmann entropy of a landscape gradient.”
     Transactions in GIS (2018).
-  - Gao, Peichao and Zhilin Li. “Aggregation-based method for computing
+-   Gao, Peichao and Zhilin Li. “Aggregation-based method for computing
     absolute Boltzmann entropy of landscape gradient with full
     thermodynamic consistency.” Landscape Ecology (2019).
-  - Nowosad, J.; Gao, P. belg: A Tool for Calculating Boltzmann Entropy
+-   Nowosad, J.; Gao, P. belg: A Tool for Calculating Boltzmann Entropy
     of Landscape Gradients. Entropy 2020, 22, 937.
     <https://doi.org/10.3390/e22090937>

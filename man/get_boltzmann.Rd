@@ -9,6 +9,7 @@
 \alias{get_boltzmann.RasterStack}
 \alias{get_boltzmann.RasterBrick}
 \alias{get_boltzmann.stars}
+\alias{get_boltzmann.SpatRaster}
 \title{Boltzmann entropy of a landscape gradient}
 \usage{
 get_boltzmann(
@@ -74,9 +75,17 @@ get_boltzmann(
   base = "log10",
   relative = FALSE
 )
+
+\method{get_boltzmann}{SpatRaster}(
+  x,
+  method = "aggregation",
+  na_adjust = TRUE,
+  base = "log10",
+  relative = FALSE
+)
 }
 \arguments{
-\item{x}{stars, RasterLayer, RasterStack, RasterBrick, matrix, or array.}
+\item{x}{SpatRaster, stars, RasterLayer, RasterStack, RasterBrick, matrix, or array.}
 
 \item{method}{A method used. Either "hierarchy" for
 the hierarchy-based method (Gao et al., 2017) or "aggregation" (default)
@@ -86,7 +95,7 @@ for the aggregation-based method (Gao et al., 2019).}
 
 \item{base}{A logarithm base ("log", "log2" or "log10").}
 
-\item{relative}{Should a relative or absolute entopy be calculated? TRUE or FALSE (default).}
+\item{relative}{Should a relative or absolute entropy be calculated? TRUE or FALSE (default).}
 }
 \value{
 a numeric vector
